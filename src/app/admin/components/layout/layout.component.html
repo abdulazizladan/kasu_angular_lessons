@@ -1,0 +1,23 @@
+<div class="div" fxLayout="column">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button> KASU
+  </mat-toolbar>
+  <mat-sidenav-container fxFlex="100%">
+    <mat-sidenav #sidenav>
+      <div id="profilepic">
+
+      </div>
+      <button mat-button routerLink="staff">
+        Staff
+      </button>
+      <button mat-button routerLink="student">
+        Student
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
